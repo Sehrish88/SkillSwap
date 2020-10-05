@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user.build(field params[:field], years_experience: params[:years_experience]) 
+
 
     respond_to do |format|
       if @user.save
