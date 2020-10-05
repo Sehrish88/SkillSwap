@@ -12,7 +12,6 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-
             <Route exact path="/dashboard" component={Dashboard} />
           </Switch>
         </Router>
