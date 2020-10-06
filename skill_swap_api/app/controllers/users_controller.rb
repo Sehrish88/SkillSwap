@@ -27,13 +27,15 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+  
     @user = User.new(user_params)
-    @user.build(field params[:field], years_experience: params[:years_experience]) 
+    binding.pry 
+     
 
 
     respond_to do |format|
       if @user.save
-        session[:id] = user.id 
+        session[:id] = @user.id 
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -75,6 +77,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation,  skill_attributes: [:field, :years_experience]) 
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, skills_attributes: [:field, :years_experience]) 
     end
 end
