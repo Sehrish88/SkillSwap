@@ -3,7 +3,7 @@ import {MdSwapCalls} from 'react-icons/md';
 
 
 const Home = () => {
-    return <h1 style={{color: 'green', textAlign: 'center'}}>Welcome To Skill Swap
+    return <h1 style={{color: 'green', textAlign: 'center'}}> Skill Swap
         <MdSwapCalls />
     </h1>
      
