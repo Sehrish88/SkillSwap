@@ -5,11 +5,13 @@ class SkillsController < ApplicationController
   # GET /skills.json
   def index
     @skills = Skill.all
-  end
+    render json: @skills
+  end 
 
   # GET /skills/1
   # GET /skills/1.json
   def show
+    
   end
 
   # GET /skills/new
