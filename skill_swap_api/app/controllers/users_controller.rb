@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users 
-  end
+    render :json => @users, :include => {:skills => { :only => [:field, :years_experience], except: [ :created_at, :updated_at]}}
+  end 
 
   # GET /users/1
   # GET /users/1.json
