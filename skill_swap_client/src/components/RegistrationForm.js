@@ -33,11 +33,12 @@ class RegistrationForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addUser(this.state)
+        this.props.history.push(`/dashboard`)
     }
 
     render() {
         return (
-            <form  onSubmit={this.handleSubmit}>
+            <form  style={{color: 'green'}} onSubmit={this.handleSubmit}>
                 <label>Name</label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
                 <br/>
