@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchUsers } from '../actions/usersActions'; 
 import RegistrationForm from './RegistrationForm'; 
+import UsersList from './UsersList' 
 
 
  class UsersContainer extends Component {
@@ -12,7 +13,9 @@ import RegistrationForm from './RegistrationForm';
     render() {
         return (
             <div>
-                Users Container 
+                Users List
+
+                <UsersList />
                 <RegistrationForm />
             </div>
         )
