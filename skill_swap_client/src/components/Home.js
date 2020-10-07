@@ -3,8 +3,9 @@ import {MdSwapCalls} from 'react-icons/md';
 
 
 const Home = () => {
-    return <h1 style={{color: 'green', textAlign: 'center'}}> Skill Swap
+    return <h1 style={{color: 'green', textAlign: 'center', border: '5px solid green'}}> Skill Swap
         <MdSwapCalls />
+        
     </h1>
      
 
@@ -13,4 +14,3 @@ const Home = () => {
 export default Home; 
 
 
-//
