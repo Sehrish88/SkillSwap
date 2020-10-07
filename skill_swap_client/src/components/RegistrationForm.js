@@ -42,7 +42,7 @@ class RegistrationForm extends Component {
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
                 <br/>
 
-                <label>Emai</label>
+                <label>Email</label>
                 <input type='text' value={this.state.email} onChange={this.handleChange} name='email'/>
                 <br/>
 
