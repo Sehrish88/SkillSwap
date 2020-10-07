@@ -7,6 +7,9 @@ import TimeOfDay from './components/TimeOfDay';
 import UsersContainer from './components/UsersContainer' 
 import { connect } from 'react-redux'
 import { fetchUsers } from './actions/usersActions'
+import Login from './components/LoginForm'; 
+import RegistrationForm from './components/RegistrationForm';
+import LoginForm from './components/LoginForm';
 //import {MdSwapCalls} from 'react-icons/md';
 
 function App(props) {
@@ -21,6 +24,8 @@ function App(props) {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/users" component={UsersContainer} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/login" component={LoginForm} />
+            <Route exact path="/register" component={RegistrationForm} /> 
 
           </Switch>
         </Router> 
