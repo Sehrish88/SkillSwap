@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import authReducer from '../reducers/authReducer' 
 
 const Dashboard = ({user}) => {
-    return <h3> Welcome {user.email} </h3>; 
+    console.log(user)
+    return <h3 style={{color: 'green', textAlign: 'center'}}> Welcome {user.name}</h3>; 
 
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         user: state.auth.currentUser, 
-//     }
-//     };
+const mapStateToProps = (state) => {
+    return {
+        user: state.auth.currentUser, 
+    }
+    };
 
-export default  Dashboard; 
+export default  connect(mapStateToProps)(Dashboard); 
