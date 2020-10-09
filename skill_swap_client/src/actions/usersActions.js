@@ -12,27 +12,35 @@ export const  fetchUsers= () => {
 export const addUser = user => {
     console.log(user)
     return dispatch => {
-        fetch('http://127.0.0.1:3000/users', {
+        fetch('http://127.0.0.1:3000/users.json', {
         method: 'POST', 
         body: JSON.stringify({user}),
         headers: { 'Content-Type': 'application/json'}
     })
     .then(resp => resp.json())
-    .then(user => dispatch({ type: 'ADD_USER', payload: user})) 
+    .then(data => {
+       console.log(user) 
+       dispatch({ type: 'ADD_USER', payload: data.user})
+       dispatch({ type: 'AUTH_SUCCESSFUL', payload: {loggedIn: data.logged_in,  currentUser: data.user}})
+    }) 
 
     }
     
-    const userLogin = (state = {currentUser: {}, loggedIn: false}, action) => {
-
-        switch(action.type) {
-            case 'LOGIN':
-                return {...state, loggedIn: true, currentUser : action.payload}
-
-            case 'LOGOUT':
-                return {...state, loggedIn: false, currentUser: {}}
-
-        }
-    }
+    
 
 } 
 
+// export const logIn = user => {
+//     console.log(user)
+//     return dispatch => {
+//         fetch('http://127.0.0.1:3000/users.json', {
+//             method: 'POST', 
+//             body: JSON.stringify({user}),
+//             headers: { 'Content-Type': 'application/json'}
+//         })
+//         .then(resp => resp.json())
+//         .then(data => {
+       
+//         dispatch({ type: 'AUTH_SUCCESSFUL', payload: {loggedIn: data.logged_in,  currentUser: data.user}})
+//     })
+// }
