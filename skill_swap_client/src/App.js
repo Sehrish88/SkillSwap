@@ -10,6 +10,8 @@ import { fetchUsers } from './actions/usersActions'
 import Login from './components/LoginForm'; 
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
+import NavBar from './components/NavBar'
+
 //import {MdSwapCalls} from 'react-icons/md';
 
 function App(props) {
@@ -28,8 +30,9 @@ function App(props) {
             <Route exact path="/register" component={RegistrationForm} /> 
 
           </Switch>
+         
         </Router> 
-        
+     
          </div>
        
 
