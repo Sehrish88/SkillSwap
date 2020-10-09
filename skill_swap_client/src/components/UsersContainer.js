@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../actions/usersActions'; 
 import RegistrationForm from './RegistrationForm'; 
 import UsersList from './UsersList' 
+import {MdSwapCalls} from 'react-icons/md';
 
 
  class UsersContainer extends Component {
@@ -13,10 +14,10 @@ import UsersList from './UsersList'
     render() {
         return (
             <div>
-                Users List
+                  <h1 style={{color: 'green', textAlign: 'center'}}> Skill Swap <MdSwapCalls /> </h1>
 
                 <UsersList />
-                <RegistrationForm />
+               
             </div>
         )
     }
