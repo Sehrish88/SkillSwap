@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addUser } from '../actions/usersActions' 
-
+import {register} from '../actions/authActions'
 
 class RegistrationForm extends Component {
 
@@ -38,6 +38,8 @@ class RegistrationForm extends Component {
 
     render() {
         return (
+
+            
             <form  style={{color: 'green'}} onSubmit={this.handleSubmit}>
                 <label>Name</label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
@@ -63,7 +65,7 @@ class RegistrationForm extends Component {
                 <input type='text' value={this.state.years_experience} onChange={(e) => {this.setState({skills_attributes: {...this.state.skills_attributes, years_experience: e.target.value}})}} name='years_experience'/>
                 <br/>
 
-                <input type='submit' value='Create User' /> 
+                <input type='submit' value='Add your Information' /> 
 
 
             </form>
@@ -71,5 +73,5 @@ class RegistrationForm extends Component {
     }
 }
 
-export default connect(null, {addUser })(RegistrationForm); 
+export default connect(null, {addUser, register})(RegistrationForm);  
 
