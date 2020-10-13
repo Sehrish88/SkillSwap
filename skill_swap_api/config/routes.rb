@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :sessions, only: [:create]
   resources :users
+  get 'logged_in', to: 'sessions#logged_in'
   resources :skills 
 end
