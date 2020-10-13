@@ -29,18 +29,3 @@ export const addUser = user => {
     
 
 } 
-
-// export const logIn = user => {
-//     console.log(user)
-//     return dispatch => {
-//         fetch('http://127.0.0.1:3000/users.json', {
-//             method: 'POST', 
-//             body: JSON.stringify({user}),
-//             headers: { 'Content-Type': 'application/json'}
-//         })
-//         .then(resp => resp.json())
-//         .then(data => {
-       
-//         dispatch({ type: 'AUTH_SUCCESSFUL', payload: {loggedIn: data.logged_in,  currentUser: data.user}})
-//     })
-// }
