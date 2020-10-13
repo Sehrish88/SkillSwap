@@ -4,7 +4,7 @@ import authReducer from '../reducers/authReducer'
 
 const Dashboard = ({user}) => {
     console.log(user)
-    return <h3 style={{color: 'green', textAlign: 'center'}}> Welcome {user.name}</h3>; 
+    return <h3 style={{color: 'green', textAlign: 'center'}}> {user.name}'s Dashboard</h3>; 
 
 }
 
