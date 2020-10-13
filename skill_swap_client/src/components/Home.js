@@ -1,26 +1,26 @@
-import React from 'react';
-import {MdSwapCalls} from 'react-icons/md';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'; 
 import TimeOfDay from './TimeOfDay'
 import NavBar from './NavBar'
+import Header from './Header'
 
 
 
 
-const Home = () => {
-    return (
+class Home extends Component {
+    render() {return (
         <div>
        
 
 
-        <h1 style={{color: 'green', textAlign: 'center', border: '5px solid green'}}> Skill Swap <MdSwapCalls />  </h1>
+        <Header /> 
+       
         <NavBar />
-
-
-        
-        
-     </div>
+        </div>
 
     )
+
+    }
  
     
  
