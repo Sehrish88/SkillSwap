@@ -10,7 +10,6 @@ import { fetchUsers } from './actions/usersActions'
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
 import NavBar from './components/NavBar'
-import skillsShowPage from './components/skillsShowPage'
 import SkillsList from './components/SkillsList';
 import SkillsForm from './components/SkillsForm' 
 
@@ -36,7 +35,7 @@ class App extends Component  {
            <Route  path="/register" component={RegistrationForm} /> 
            <Route  path="/addSkill" component={SkillsForm} /> 
            <Route exact path="/skills" component={SkillsList} />
-           <Route exact path="/skills/{:id}" component={skillsShowPage} />
+           
 
 
          </Switch>
