@@ -10,15 +10,16 @@ import { fetchUsers } from './actions/usersActions'
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
 import NavBar from './components/NavBar'
+import skillsShowPage from './components/skillsShowPage'
+import SkillsList from './components/SkillsList';
+import SkillsForm from './components/SkillsForm' 
 
 
 //import {MdSwapCalls} from 'react-icons/md';
 
 class App extends Component  {
     
-  componentDidMount() {
-    this.props.fetchUsers()
-    }
+ 
   render () {
     return (
       <div className="App">
@@ -33,6 +34,10 @@ class App extends Component  {
            <Route  path="/about" component={About} />
            <Route  path="/login" component={LoginForm} />
            <Route  path="/register" component={RegistrationForm} /> 
+           <Route  path="/addSkill" component={SkillsForm} /> 
+           <Route exact path="/skills" component={SkillsList} />
+           <Route exact path="/skills/{:id}" component={skillsShowPage} />
+
 
          </Switch>
         
