@@ -1,8 +1,9 @@
-export const  fetchskills= () => {
+export const  fetchSkills= () => {
+    console.log('skills action')
     return (dispatch) => {
         fetch('http://127.0.0.1:3000/skills')
         .then(resp => resp.json())
-        .then(users => dispatch({ type: 'FETCH_SKILLS', payload: skills})) 
+        .then(skills => dispatch({ type: 'FETCH_SKILLS', payload: skills})) 
     }
        
 } 
