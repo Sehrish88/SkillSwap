@@ -8,6 +8,10 @@ import Dashboard from './Dashboard'
 
 
  class UsersContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchUsers()
+        }
      
 
     render() {
@@ -19,7 +23,7 @@ import Dashboard from './Dashboard'
 
                 <UsersList />
                 
-                <Dashboard /> 
+               
                 
                
             </div>
