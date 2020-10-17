@@ -11,7 +11,8 @@ class SkillsController < ApplicationController
   # GET /skills/1
   # GET /skills/1.json
   def show
-    
+    @skill = Skill.find_by(id: params[:id])
+    render json: @skill 
   end
 
   # GET /skills/new
