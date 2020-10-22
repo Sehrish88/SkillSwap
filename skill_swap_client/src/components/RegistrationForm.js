@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addUser } from '../actions/usersActions' 
 import {register} from '../actions/authActions'
+import HomeLink from './HomeLink'
 
 class RegistrationForm extends Component {
 
@@ -38,9 +39,12 @@ class RegistrationForm extends Component {
 
     render() {
         return (
+           
 
             
             <form  style={{color: 'green'}} onSubmit={this.handleSubmit}>
+                <HomeLink />
+                
                 <label>Name</label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
                 <br/>
