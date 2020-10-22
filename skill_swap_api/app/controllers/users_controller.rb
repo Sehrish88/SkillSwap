@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       if @user.save
         session[:id] = @user.id 
         format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json:  {user: @user, logged_in: true}}
+        format.json { render json:  {user: { email: @user.email, name: @user.name, skills: @user.skills},  logged_in: true}}
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
