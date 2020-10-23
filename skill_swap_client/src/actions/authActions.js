@@ -14,7 +14,7 @@ export const register = (user, history) => {
             type: 'AUTH_SUCCESSFUL',
             payload: { loggedIn: data.logged_in, currentUser: data.user },
           });
-          history.push(`/dashboard`);
+          //history.push(`/dashboard`);
         });
     };
   };
@@ -36,7 +36,7 @@ export const register = (user, history) => {
             type: 'AUTH_SUCCESSFUL',
             payload: { loggedIn: data.logged_in, currentUser: data.user },
           });
-          history.push(`/dashboard`);
+          //history.push(`/dashboard`);
         });
     };
   };
