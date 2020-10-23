@@ -21,7 +21,7 @@ export const addUser = user => {
     .then(data => {
        console.log(user) 
        dispatch({ type: 'ADD_USER', payload: data.user})
-       dispatch({ type: 'AUTH_SUCCESSFUL', payload: {loggedIn: data.logged_in,  currentUser: data.user}})
+       
     }) 
 
     }
