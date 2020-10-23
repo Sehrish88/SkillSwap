@@ -4,7 +4,7 @@ import HomeLink from './HomeLink'
 
 
 const UsersList = ({users}) => {
-    console.log(users)
+    
     return(
         <div>
            <HomeLink />
