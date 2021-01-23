@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { addUser } from '../actions/usersActions' 
 import {register} from '../actions/authActions'
 import HomeLink from './HomeLink'
+import Header from './Header';
 
 class RegistrationForm extends Component {
 
@@ -43,6 +44,7 @@ class RegistrationForm extends Component {
 
             
             <form  style={{color: 'green'}} onSubmit={this.handleSubmit}>
+                <Header />
                 <HomeLink />
                 
                 <label>Name</label>
@@ -76,6 +78,13 @@ class RegistrationForm extends Component {
         );
     }
 }
+const mDTP = dispatch => {
+    return{
+        addUser: () => dispatch(addUser())
+    }
+}
 
-export default connect(null, {addUser, register})(RegistrationForm);  
+
+//export default connect(null, mDTP)(RegistrationForm);  
+export default connect(null, { addUser})(RegistrationForm);
 
