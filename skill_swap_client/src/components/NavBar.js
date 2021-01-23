@@ -4,15 +4,15 @@ import { Link, NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (<nav className="nav">
         <div className="Container">
-            <h6 style={{color: 'green', }}><ul >
-               <NavLink to="/">Home</NavLink> <br />
-               <NavLink to="/about">About</NavLink><br />
-               <NavLink to="/register">Register</NavLink><br />
-               <NavLink to="/addSkill">Add Skill</NavLink><br />
-               <NavLink to="/users">Browse Users</NavLink><br />
+            <h6 style= {{color: 'green' }}><ul > 
+               <NavLink to="/">Home</NavLink> <span className="second-word-formatting"></span><br/>
+               <NavLink to="/about">About</NavLink> <span className="second-word-formatting"></span><br/>
+               <NavLink to="/register">Register</NavLink> <span className="second-word-formatting"></span><br/>
+               <NavLink to="/addSkill">Add Skill</NavLink> <span className="second-word-formatting"></span><br/>
+               <NavLink to="/users">Browse Users</NavLink> <span className="second-word-formatting"></span><br/>
                <NavLink to="/skills">Browse skills</NavLink><br />
               
-              
+               
             </ul></h6>
         </div>
     </nav>
