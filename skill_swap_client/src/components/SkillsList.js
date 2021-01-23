@@ -4,6 +4,7 @@ import { fetchSkills } from '../actions/skillsActions'
 import Header from './Header'
 import Skill from './Skill'
 import HomeLink from './HomeLink'
+import UpvoteButton from './UpvoteButton'
 
 class  SkillsList extends Component {
  
@@ -17,17 +18,17 @@ class  SkillsList extends Component {
             <div>
                  <Header /> 
                  <HomeLink />
-                {this.props.skills.map(skill => <Skill skill={skill} />)}
+                {this.props.skills.map(skill => <Skill skill={skill}/>)}
+               
+         
             </div>
         )
     }
     
-}
+} 
 
 
 
-const mapStateToProps = state => {
-    return{skills: state.skills}
-}
 
-export default connect(mapStateToProps, { fetchSkills })(SkillsList); 
+
+export default connect(state => ({ skills: state.skills}), { fetchSkills })(SkillsList); 
