@@ -8,7 +8,8 @@ const UsersList = ({users}) => {
     return(
         <div>
            <HomeLink />
-            {users.map(user => <ul><li key={user.id} style= {{border: '3px solid green'}}><h4>{user.name}</h4>  <b>Email:</b>{user.email} <b>Field</b> {user.skills[0].field} <b> Years of Experience-</b> {user.skills[0].years_experience} </li></ul>)}
+            {users.map(user => <ul><li key={user.id} style= {{border: '3px solid green', backgroundColor: 'skyblue'}}><h3>{user.name}</h3>  <b>Email: </b>{user.email} <br/>  <b>Field-</b> {user.skills[0].field} <br/> <b>Years of Experience-</b> {user.skills[0].years_experience} 
+            </li></ul>)}
             
             
         </div>
