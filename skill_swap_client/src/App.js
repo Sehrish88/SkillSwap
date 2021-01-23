@@ -10,6 +10,7 @@ import RegistrationForm from './components/RegistrationForm';
 import NavBar from './components/NavBar'
 import SkillsList from './components/SkillsList';
 import SkillsForm from './components/SkillsForm' 
+import './App.css'
 
 
 //import {MdSwapCalls} from 'react-icons/md';
@@ -27,7 +28,7 @@ class App extends Component  {
          <Switch>
            <Route exact path="/" component={Home} />
            <Route  path="/users" component={UsersContainer} />
-           <Route  path="/about" component={About} />
+           <Route  path="/about" component={ About } />
            <Route  path="/register" component={RegistrationForm} /> 
            <Route  path="/addSkill" component={SkillsForm} /> 
            <Route exact path="/skills" component={SkillsList} />
