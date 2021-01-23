@@ -3,6 +3,7 @@ import { addSkill } from '../actions/skillsActions'
 import { connect } from 'react-redux';
 import SkillsList from './SkillsList';
 import HomeLink from './HomeLink' 
+import Header from './Header'
 
 class SkillsForm extends Component {
     state = {
@@ -30,6 +31,7 @@ class SkillsForm extends Component {
     render() {
         return (
             <form style={{color: 'green'}} onSubmit={this.handleSubmit}> 
+            <Header />
             <HomeLink />
                 <label>Field</label>
                 <input type='text' value={this.state.field} onChange={this.handleChange} name="field"/>
