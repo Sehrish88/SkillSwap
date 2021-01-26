@@ -16,8 +16,6 @@ const UsersList = ({users}) => {
     )
 }
 
-const mapStateToProps = state => {
-    return{users: state.users}
-}
 
-export default connect(mapStateToProps)(UsersList) 
+
+export default UsersList
