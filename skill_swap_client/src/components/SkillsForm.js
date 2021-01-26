@@ -33,13 +33,13 @@ class SkillsForm extends Component {
             <form style={{color: 'green'}} onSubmit={this.handleSubmit}> 
             <Header />
             <HomeLink />
-                <label>Field</label>
+                <label>Field: </label>
                 <input type='text' value={this.state.field} onChange={this.handleChange} name="field"/>
-                < br />
+                < br /><br />
 
-                <label>Years Experience</label>
+                <label>Years Experience: </label>
                 <input type='text' value={this.state.years_experience} onChange={this.handleChange} name="years_experience"/>
-                < br /> 
+                < br /> <br />
                 <input type='submit' value="Add Skill" /> 
             </form>
         )

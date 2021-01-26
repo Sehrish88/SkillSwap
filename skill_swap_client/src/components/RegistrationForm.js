@@ -47,29 +47,29 @@ class RegistrationForm extends Component {
                 <Header />
                 <HomeLink />
                 
-                <label>Name</label>
+                <label>Name: </label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
-                <br/>
+                <br/><br/>
 
-                <label>Email</label>
+                <label>Email: </label>
                 <input type='text' value={this.state.email} onChange={this.handleChange} name='email'/>
-                <br/>
+                <br/><br/>
 
-                <label>Password</label>
-                <input type='text' value={this.state.password} onChange={this.handleChange} name='password'/>
-                <br/>
+                <label>Password: </label>
+                <input type='password' value={this.state.password} onChange={this.handleChange} name='password'/>
+                <br/><br/>
 
-                <label>Password Confirmation</label>
-                <input type='text' value={this.state.password_confirmation} onChange={this.handleChange} name='password_confirmation'/>
-                <br/>
+                <label>Password Confirmation: </label>
+                <input type='password' value={this.state.password_confirmation} onChange={this.handleChange} name='password_confirmation'/>
+                <br/><br/>
 
-                <label>Field</label>
+                <label>Field: </label>
                 <input type='text' value={this.state.field} onChange={(e) => {this.setState({skills_attributes: {...this.state.skills_attributes, field: e.target.value}})}} name='field'/>
-                <br/>
+                <br/><br/>
 
-                <label>Years Experience</label>
+                <label>Years Experience: </label>
                 <input type='text' value={this.state.years_experience} onChange={(e) => {this.setState({skills_attributes: {...this.state.skills_attributes, years_experience: e.target.value}})}} name='years_experience'/>
-                <br/>
+                <br/><br/>
 
                 <input type='submit' value='Add your Information' /> 
 
