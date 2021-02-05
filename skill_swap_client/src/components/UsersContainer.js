@@ -6,6 +6,7 @@ import UsersList from './UsersList'
 import {MdSwapCalls} from 'react-icons/md';
 import Header from './Header'
 import SearchBar from './SearchBar'
+import NavBar from './NavBar'
 
 
 
@@ -24,7 +25,7 @@ import SearchBar from './SearchBar'
         filteredUsers = (e) => {
             const field = e.target.value 
            const filteredUsers = this.props.users.filter((user) => user.skills[0].field.includes(field) ) 
-           this.setState({filteredUsers})
+           this.setState({filteredUsers}) 
 
 
 
@@ -40,10 +41,12 @@ import SearchBar from './SearchBar'
         return (
             <div>
                    <Header /> 
+                   <NavBar />
+
                    <SearchBar handleChange = {this.filteredUsers}/> 
             
 
-                   <UsersList users={this.usersArray()}/>
+                    <UsersList users={this.usersArray()}/>  
                 
                
                 
@@ -53,11 +56,11 @@ import SearchBar from './SearchBar'
     }
 }
 const mapStateToProps = state => {
-    return{users: state.users} 
+    return{users: state.users.users} 
 }
 
 
 
-export default connect(mapStateToProps, { fetchUsers })(UsersContainer);
+export default connect(mapStateToProps, { fetchUsers })(UsersContainer); 
 
 
