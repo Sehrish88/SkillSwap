@@ -16,6 +16,9 @@ export const addUser = user => {
     //console.log(user)
     
     return dispatch => {
+        dispatch({
+            type: 'POSTING_USER' 
+        })
         fetch('http://127.0.0.1:3000/users.json', {
         method: 'POST', 
         body: JSON.stringify({user}),
