@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchSkills } from '../actions/skillsActions'
 import Header from './Header'
 import Skill from './Skill'
-import HomeLink from './HomeLink'
+import NavBar from './NavBar'
 import UpvoteButton from './UpvoteButton'
 
 class  SkillsList extends Component {
@@ -17,7 +17,7 @@ class  SkillsList extends Component {
         return(
             <div>
                  <Header /> 
-                 <HomeLink />
+                 <NavBar />
                 {this.props.skills.map(skill => <Skill skill={skill}/>)}
                
          
