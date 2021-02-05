@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { addSkill } from '../actions/skillsActions'
 import { connect } from 'react-redux';
 import SkillsList from './SkillsList';
-import HomeLink from './HomeLink' 
+import NavBar from './NavBar'
 import Header from './Header'
 
 class SkillsForm extends Component {
@@ -30,9 +30,10 @@ class SkillsForm extends Component {
 
     render() {
         return (
-            <form style={{color: 'green'}} onSubmit={this.handleSubmit}> 
+            
+            <form style={{color: 'green'}} onSubmit={this.handleSubmit} className=""> 
             <Header />
-            <HomeLink />
+            <NavBar />
                 <label>Field: </label>
                 <input type='text' value={this.state.field} onChange={this.handleChange} name="field"/>
                 < br /><br />
@@ -42,6 +43,7 @@ class SkillsForm extends Component {
                 < br /> <br />
                 <input type='submit' value="Add Skill" /> 
             </form>
+            
         )
     }
 }
