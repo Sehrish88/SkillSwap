@@ -1,7 +1,4 @@
-.container-flex {
-  width: 80vw;
-  margin: 0 auto;
-  text-align: center;
+.App {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -16,13 +13,9 @@ input {
 }
 
 .navbar {
-  width: 100vw;
+  width: 150%;
 }
 
 .navbar a:hover {
   background-color: rgb(79, 206, 143);
-}
-
-img {
-  width: 15%;
 }
