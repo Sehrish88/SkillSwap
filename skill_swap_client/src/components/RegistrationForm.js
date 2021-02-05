@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addUser } from '../actions/usersActions' 
 import {register} from '../actions/authActions'
-import HomeLink from './HomeLink'
+import NavBar from './NavBar'
 import Header from './Header';
 
 class RegistrationForm extends Component {
+
+    componentDidUpdate(prevProps){
+        if (prevProps.posting) {
+            this.props.history.push(`/users`)
+        }
+    } 
 
     state = { 
         name: '',
@@ -35,7 +41,7 @@ class RegistrationForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addUser(this.state)
-        this.props.history.push(`/users`)
+        
     }
 
     render() {
@@ -43,9 +49,9 @@ class RegistrationForm extends Component {
            
 
             
-            <form  style={{color: 'green'}} onSubmit={this.handleSubmit}>
+            <form  style={{color: 'green'}} onSubmit={this.handleSubmit} >
                 <Header />
-                <HomeLink />
+                <NavBar />
                 
                 <label>Name: </label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
@@ -84,7 +90,13 @@ const mDTP = dispatch => {
     }
 }
 
+const mapStateToProps = state => {
+    return{
+        posting: state.users.posting 
+    }
+} 
+
 
 //export default connect(null, mDTP)(RegistrationForm);  
-export default connect(null, { addUser})(RegistrationForm);
+export default connect(mapStateToProps, { addUser})(RegistrationForm);
 
