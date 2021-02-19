@@ -32,10 +32,7 @@ class App extends Component  {
            <Route  path="/register" component={RegistrationForm} /> 
            <Route  path="/addSkill" component={SkillsForm} /> 
            <Route exact path="/skills" component={SkillsList} />
-           
-
-
-         </Switch>
+        </Switch>
         
        </Router> 
     
