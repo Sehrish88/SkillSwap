@@ -7,6 +7,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers/rootReducer' 
 import { BrowserRouter as Router } from 'react-router-dom'; 
+import { MdFastRewind } from 'react-icons/md';
 
 const store = createStore(
     rootReducer,
