@@ -11,6 +11,7 @@ const NavBar = () => {
                <NavLink exact activeStyle={{color: 'green'}} to="/addSkill">Add Skill</NavLink> <span className="second-word-formatting"></span>
                <NavLink exact activeStyle={{color: 'green'}} to="/users">Browse Users</NavLink> <span className="second-word-formatting"></span>
                <NavLink exact activeStyle={{color: 'green'}} to="/skills">Browse skills</NavLink>
+               
               
                
             </ul></h6>
