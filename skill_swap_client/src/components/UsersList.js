@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 
 const UsersList = ({users}) => {
-    
+    console.log(users)
     return(
         <div>
         
