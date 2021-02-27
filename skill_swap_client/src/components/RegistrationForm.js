@@ -84,19 +84,13 @@ class RegistrationForm extends Component {
         );
     }
 }
-const mDTP = dispatch => {
-    return{
-        addUser: () => dispatch(addUser())
-    }
-}
 
 const mapStateToProps = state => {
     return{
-        posting: state.users.posting 
+        posting: state.users.posting
     }
-} 
+}
 
-
-//export default connect(null, mDTP)(RegistrationForm);  
-export default connect(mapStateToProps, { addUser})(RegistrationForm);
+ 
+export default connect(mapStateToProps, { addUser})(RegistrationForm); 
 
