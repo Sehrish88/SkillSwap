@@ -4,7 +4,7 @@ import { fetchSkills } from '../actions/skillsActions'
 import Header from './Header'
 import Skill from './Skill'
 import NavBar from './NavBar'
-import UpvoteButton from './UpvoteButton'
+
 
 class  SkillsList extends Component {
  
